@@ -1,6 +1,6 @@
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
-from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 
 # 1. データの準備（scikit-learnに入っているサンプルデータを使います）
@@ -15,7 +15,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 # 3. モデル（AIの脳みそ）を選んで学習させる
 # ここでは「サポートベクターマシン (SVC)」というアルゴリズムを使います
-model = SVC() 
+model = DecisionTreeClassifier() 
 model.fit(X_train, y_train) # .fit() が「学習しろ！」という命令です
 
 # 4. 未知のデータ（テスト用データ）で予測してみる
